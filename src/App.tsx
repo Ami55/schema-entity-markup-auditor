@@ -26,7 +26,7 @@ export default function App(){
     <nav className="tabs">{tabs.map(([id,label])=><button key={id} className={active===id?'active':''} onClick={()=>setActive(id)}>{label}</button>)}</nav>
     <div className="panel">{active==='overview'&&<Overview audit={audit} stats={stats}/>} {active==='classification'&&<Classification audit={audit}/>} {active==='existing'&&<Existing audit={audit}/>} {active==='requirements'&&<Requirements audit={audit}/>} {active==='issues'&&<Issues audit={audit}/>} {active==='entities'&&<Entities audit={audit} setAudit={setAudit}/>} {active==='identity'&&<Identity audit={audit}/>} {active==='jsonld'&&<JsonLd audit={audit} copy={copy}/>} {active==='validation'&&<Validation audit={audit}/>} {active==='matrix'&&<Matrix audit={audit}/>} {active==='plan'&&<Plan audit={audit}/>} {active==='reports'&&<Reports audit={audit} exportFile={exportFile} copy={copy}/>} {active==='saved'&&<Saved saved={saved} open={a=>{setAudit(a);setActive('overview')}} remove={id=>{const n=saved.filter(a=>a.id!==id);setSaved(n);localStorage.setItem('schema-audits',JSON.stringify(n))}}/>}</div>
    </main></section>
-  <footer><div><strong>Schema &amp; Entity Markup Auditor</strong><p>Structured-data evidence, entity reconciliation and implementation QA.</p></div><span>© 2026 Schema &amp; Entity Markup Auditor. Created by <b>Ami Saeednia</b>. All rights reserved.</span></footer>
+  <footer><div><strong>Schema &amp; Entity Markup Auditor</strong><p>Structured-data evidence, entity reconciliation and implementation QA.</p></div><span>© 2026 Schema &amp; Entity Markup Auditor. Developed by <b>Ami - SEO Girl</b>. All rights reserved.</span></footer>
   {guide&&<Guide close={()=>setGuide(false)}/>}</div>
 }
 
