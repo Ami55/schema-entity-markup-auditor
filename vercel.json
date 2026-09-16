@@ -1,6 +1,6 @@
 {
   "version": 2,
   "framework": "vite",
-  "functions": { "api/audit.js": { "maxDuration": 60 } },
+  "functions": { "api/audit.js": { "maxDuration": 60 }, "api/page-type-audit.js": { "maxDuration": 60 }, "api/entity-schema.js": { "maxDuration": 60 } },
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
