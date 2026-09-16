@@ -14,6 +14,7 @@ The Vercel function at `/api/audit` fetches a submitted public URL, extracts vis
 The Page-Type Audit at `/api/page-type-audit` accepts a website or XML sitemap URL. It discovers sitemap indexes, groups up to 5,000 URLs into page families, samples representative URLs, detects existing JSON-LD types, and produces a template-level schema matrix and connected Schema Map.
 
 The Entity Schema Generator at `/api/entity-schema` extracts a page's primary subject and meaningful mentions, searches Wikidata for identity candidates, proposes `about`, `mentions`, and `sameAs` relationships, and produces a connected entity graph. Search matches are never added to `sameAs` until a human approves the exact identity.
+When a site blocks direct server-side fetching with HTTP 401, 403, or 429, Entity Schema Generator retries through a read-only page-content fallback. If the external fallback is also blocked, the user can paste visible page text or HTML into the built-in Page content field. The report labels the retrieval path and does not claim to have inspected raw on-page JSON-LD through a fallback.
 
 Travel template recommendations include `CollectionPage`, `ItemList`, `TouristTrip`, `Product`, `Service`, `Offer`, `Review`, and `AggregateRating` where appropriate. Review, rating, offer, and list markup remains conditional on matching visible, page-specific content; the auditor reports those prerequisites instead of inventing values.
 
