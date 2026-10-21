@@ -466,7 +466,7 @@ export default function App() {
         </div>
         <span>
           © 2026 Schema &amp; Entity Markup Auditor. Developed by{" "}
-          <b>Ami - SEO Girl</b>. All rights reserved.
+          <b><strong>SEO Girl - Ami</strong></b>. All rights reserved.
         </span>
       </footer>
       {guide && <Guide close={() => setGuide(false)} />}
